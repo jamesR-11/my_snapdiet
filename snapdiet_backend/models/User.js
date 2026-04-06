@@ -8,29 +8,26 @@ const UserSchema = new mongoose.Schema(
 
     // ✅ Full profile object for SnapDiet
     profile: {
-      // Basic info
-      fullName: { type: String, default: "" },
-      age: { type: Number, default: 0 },
-      gender: { type: String, default: "Prefer not to say" },
-      heightCm: { type: Number, default: 0 },
-      weightKg: { type: Number, default: 0 },
+  fullName: { type: String, default: "" },
+  age: { type: Number, default: 0 },
+  gender: { type: String, default: "Prefer not to say" },
+  heightCm: { type: Number, default: 0 },
+  weightKg: { type: Number, default: 0 },
 
-      // Diet preferences
-      goal: { type: String, default: "" }, // "Weight loss", "Muscle gain / Bodybuilding", etc.
-      dietType: { type: String, default: "Balanced" },
-      activityLevel: { type: String, default: "Medium" },
-      avoidFoods: { type: [String], default: [] },
+  goal: { type: String, default: "" },
+  dietType: { type: String, default: "Balanced" },
+  activityLevel: { type: String, default: "Medium" },
+  avoidFoods: { type: [String], default: [] },
 
-      // Allergies
-      allergies: { type: [String], default: [] },
+  allergies: { type: [String], default: [] },
 
-      // Daily nutrition targets
-      caloriesTarget: { type: Number, default: 0 },
-      proteinTarget: { type: Number, default: 0 },
-      carbsTarget: { type: Number, default: 0 },
-      fatTarget: { type: Number, default: 0 },
-      healthConditions: { type: [String], default: [] },
-    },
+  caloriesTarget: { type: Number, default: 0 },
+  proteinTarget: { type: Number, default: 0 },
+  carbsTarget: { type: Number, default: 0 },
+  fatTarget: { type: Number, default: 0 },
+
+  healthConditions: { type: [String], default: [] },
+}
   },
   { timestamps: true }
 );

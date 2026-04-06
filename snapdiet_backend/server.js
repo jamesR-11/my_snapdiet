@@ -5,7 +5,8 @@ const cors = require("cors");
 const profileRoutes = require("./routes/profile");
 
 const authRoutes = require("./routes/auth");
-
+const mealRoutes = require("./routes/meals");
+const mealLogRoutes = require("./routes/mealLogs");
 const app = express();
 
 app.use(cors());
@@ -15,8 +16,8 @@ app.get("/", (req, res) => res.send("SnapDiet API running ✅"));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/profile", profileRoutes);
-
-
+app.use("/api/meals", mealRoutes);
+app.use("/api/meal-logs", mealLogRoutes);
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB connected"))
