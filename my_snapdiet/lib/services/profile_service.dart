@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class ProfileService {
   // ✅ iPhone needs Mac IP (NOT localhost)
-  static const String baseUrl = "http://172.20.29.191:5001"; // <-- change this
+  static const String baseUrl = "http://172.20.29.137:5001"; // <-- change this
 
   static Future<String?> _token() async {
     final prefs = await SharedPreferences.getInstance();

@@ -19,15 +19,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final pages = [
-      const CameraTab(),
-      const UploadTab(),
+      const CameraTab(), // Meals
+      const UploadTab(), // Menu
       ProfileTab(email: widget.email),
       const SettingsTab(),
     ];
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SnapDiet'),
+        title: const Text('My_SnapDiet'),
         actions: [
           IconButton(
             tooltip: 'Logout',
@@ -47,13 +47,26 @@ class _HomePageState extends State<HomePage> {
         selectedIndex: _index,
         onDestinationSelected: (i) => setState(() => _index = i),
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.camera_alt), label: 'Camera'),
           NavigationDestination(
-            icon: Icon(Icons.photo_library),
-            label: 'Upload',
+            icon: Icon(Icons.fastfood_outlined),
+            selectedIcon: Icon(Icons.fastfood),
+            label: 'Meals',
           ),
-          NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
-          NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),
+          NavigationDestination(
+            icon: Icon(Icons.menu_book_outlined),
+            selectedIcon: Icon(Icons.menu_book),
+            label: 'Menu',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.person_outline),
+            selectedIcon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.settings_outlined),
+            selectedIcon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
         ],
       ),
     );

@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService {
   // TODO: CHANGE THIS for iPhone (use your Mac IP)
-  static const String baseUrl = "http://172.20.29.191:5001";
+  static const String baseUrl = "http://172.20.29.137:5001";
 
   static Future<Map<String, dynamic>> signup({
     required String name,

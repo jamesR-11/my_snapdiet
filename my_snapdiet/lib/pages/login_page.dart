@@ -74,14 +74,12 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const Icon(Icons.restaurant_menu, size: 60),
-                  const SizedBox(height: 12),
-                  const Text(
-                    'SnapDiet',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  Image.asset(
+                    "assets/images/logo3.png",
+                    width: 180,
+                    height: 180,
                   ),
-                  const SizedBox(height: 6),
+
                   const Text(
                     'Login to continue',
                     textAlign: TextAlign.center,
